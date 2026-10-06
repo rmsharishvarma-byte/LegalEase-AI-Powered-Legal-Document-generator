@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LegalEase AI — modern legal document generator">
+<title>LegalEase AI — Legal Document Generator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="noise"></div>
+<div class="glow glow-one"></div>
+<div class="glow glow-two"></div>
+
+<nav class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-icon">L</span>
+    <span>Legal<span>Ease</span><small>AI</small></span>
+  </a>
+  <div class="nav-links">
+    <a href="#workspace">Workspace</a>
+    <a href="#features">AI Features</a>
+    <a href="#architecture">How it works</a>
+  </div>
+  <button class="theme-btn" id="themeBtn">◐</button>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="status-pill"><i></i> AI LEGAL DRAFTING · ONLINE</div>
+  <h1>Legal drafting,<br><em>reimagined.</em></h1>
+  <p>Describe your agreement in plain language. LegalEase uses AI to transform your requirements into a structured document you can review, refine and export.</p>
+  <div class="hero-actions">
+    <a href="#workspace" class="cta">Start drafting <b>↗</b></a>
+    <a href="#features" class="learn">Explore capabilities</a>
+  </div>
+  <div class="trust-row"><span>Designed for</span><b>Students</b><i>•</i><b>Freelancers</b><i>•</i><b>Creators</b><i>•</i><b>Small businesses</b></div>
+</section>
+
+<section id="workspace" class="workspace">
+  <aside class="panel input-panel">
+    <div class="panel-head">
+      <div><small>01 / INPUT</small><h2>Tell the AI</h2></div>
+      <span class="online"><i></i> Online</span>
+    </div>
+
+    <div class="type-grid">
+      <button class="type active" data-key="rental"><span>⌂</span> Rental</button>
+      <button class="type" data-key="nda"><span>◈</span> NDA</button>
+      <button class="type" data-key="employment"><span>◉</span> Employment</button>
+      <button class="type" data-key="freelance"><span>✦</span> Freelance</button>
+    </div>
+
+    <label>Party A<input id="partyA" placeholder="e.g. Priya Sharma"></label>
+    <label>Party B<input id="partyB" placeholder="e.g. Arun Kumar"></label>
+    <div class="two">
+      <label>Date<input id="date" type="date"></label>
+      <label>Amount<input id="amount" placeholder="₹25,000"></label>
+    </div>
+    <label>Duration<input id="duration" placeholder="e.g. 11 months"></label>
+    <label>Jurisdiction<input id="jurisdiction" placeholder="e.g. Chennai, Tamil Nadu"></label>
+    <label>Requirements<textarea id="requirements" rows="5" placeholder="Describe notice period, responsibilities, payment terms, confidentiality, special conditions..."></textarea></label>
+
+    <div class="chips">
+      <button data-add="Include a 30-day notice period.">30-day notice</button>
+      <button data-add="Add a clear payment schedule.">Payment schedule</button>
+      <button data-add="Add confidentiality obligations.">Confidentiality</button>
+    </div>
+
+    <button id="generate" class="generate"><span>✦</span><strong id="generateText">Generate with AI</strong><b>→</b></button>
+    <p class="fine-print">Drafting assistance only. Review documents with a qualified legal professional before signing.</p>
+  </aside>
+
+  <section class="panel editor">
+    <header class="editor-head">
+      <div><small>02 / PREVIEW</small><h2 id="title">Rental Agreement</h2></div>
+      <div class="editor-tools"><button id="copy">Copy</button><button id="pdf">Export PDF</button></div>
+    </header>
+    <div class="paper-area">
+      <article class="paper">
+        <div class="draft-tag">DRAFT · LEGAL EASE AI</div>
+        <h1 id="paperTitle">Rental Agreement</h1>
+        <div class="paper-meta">Generated <span id="paperDate"></span></div>
+        <div id="content" class="content">
+          <div class="empty-state"><span>✦</span><strong>Your AI document will appear here</strong><p>Complete the details and generate a draft to begin.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <aside class="panel chat-panel">
+    <div class="chat-head">
+      <div class="ai-icon">✦</div>
+      <div><strong>LegalEase AI</strong><span>Drafting assistant</span></div>
+      <label class="live">LIVE</label>
+    </div>
+    <div id="chat" class="chat">
+      <div class="msg ai"><i>✦</i><div>Hi! I’m your LegalEase drafting assistant. Tell me what you need and I’ll help shape the document.</div></div>
+    </div>
+    <div class="chat-box"><input id="chatInput" placeholder="Ask to change a clause..."><button id="send">↑</button></div>
+  </aside>
+</section>
+
+<section id="features" class="section">
+  <div class="section-title"><small>AI CAPABILITIES</small><h2>One workspace.<br><em>Smarter drafting.</em></h2></div>
+  <div class="cards">
+    <article><span>✦</span><h3>Natural-language drafting</h3><p>Explain your requirements naturally and let AI organize them into clear sections.</p></article>
+    <article><span>⌁</span><h3>Clause intelligence</h3><p>Quick prompts help you add notice, payment, confidentiality and termination terms.</p></article>
+    <article><span>↗</span><h3>Ready to export</h3><p>Review the polished paper preview and export a printable PDF in one click.</p></article>
+  </div>
+</section>
+
+<section id="architecture" class="section architecture">
+  <div class="section-title"><small>SYSTEM FLOW</small><h2>From idea to<br><em>document.</em></h2></div>
+  <div class="flow">
+    <div><b>01</b><strong>Describe</strong><span>Enter simple details.</span></div>
+    <div><b>02</b><strong>Generate</strong><span>Gemini drafts clauses.</span></div>
+    <div><b>03</b><strong>Review</strong><span>Inspect the live preview.</span></div>
+    <div><b>04</b><strong>Export</strong><span>Download a PDF.</span></div>
+  </div>
+</section>
+</main>
+
+<footer><span>LegalEase AI © 2026</span><span>AI drafting assistance · Not legal advice</span></footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
